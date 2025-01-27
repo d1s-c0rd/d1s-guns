@@ -3,10 +3,10 @@ Name: SPAS-15
 The better SPAS that unfortunately fell into obscurity. This was actually the very first new weapon I made.
 ]]
 
-local wepBase = weapons:getData("base_weapon")
+-- getting reference to other weapons in case in we need to inherit some properties
 local saiga12k = weapons:getData("saiga12k")
 local ar15 = weapons:getData("ar15")
-
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "spas15"
@@ -64,6 +64,7 @@ weapon.selectableMods = {{
 weapon.modRequirements = {
     auto_trigger_group = {"improved_trigger"}
 }
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 4
@@ -74,6 +75,7 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = saiga12k.modIcons
+-- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
 weapon.modIcons.extended_magazine = saiga12k.modIcons.drum_magazine
 -- sprites
 weapon.worldSprite = ar15.worldSprite

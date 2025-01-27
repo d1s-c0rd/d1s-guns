@@ -3,8 +3,9 @@ Name: Vektor R4
 It's an AK but it shoots 5.56x45MM. Also bigger magazines.
 ]]
 
+-- getting reference to other weapons in case in we need to inherit some properties
 local ar15 = weapons:getData("ar15")
-
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "vektorr4"
@@ -63,6 +64,7 @@ weapon.selectableMods = {{
     header = weapons.getModHeader("grip"),
     mods = {"comfort_grip"}
 }}
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 15

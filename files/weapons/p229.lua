@@ -1,11 +1,12 @@
 --[[
 Name: P229
-Made this as an excuse to add a pistol with a .357 SIG convesion. It also has a 9x19MM conversion for completeness sake.
+Made this as an excuse to add a pistol with a .357 SIG conversion. It also has a 9x19MM conversion for completeness sake.
 ]]
 
+-- getting reference to other weapons in case in we need to inherit some properties
 local hs2000 = weapons:getData("hs2000")
 local p89 = weapons:getData("p89")
-
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "p229"
@@ -68,9 +69,7 @@ weapon.selectableMods = {{
     header = weapons.getModHeader("grip"),
     mods = {"comfort_grip"}
 }}
-weapon.modIcons = p89.modIcons
-weapon.modIcons["9mm_magazine"] = p89.modIcons.smaller_magazine
-weapon.modIcons["357sig_magazine"] = p89.modIcons.smaller_magazine
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 4
@@ -84,5 +83,9 @@ weapon.modOverrides = {
         magSize = 2
     }
 }
+weapon.modIcons = p89.modIcons
+-- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+weapon.modIcons["9mm_magazine"] = p89.modIcons.smaller_magazine
+weapon.modIcons["357sig_magazine"] = p89.modIcons.smaller_magazine
 -- register and inherit missing properties
 weapons:register(weapon, "p89")

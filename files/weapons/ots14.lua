@@ -3,10 +3,10 @@ Name: OTs-14 Groza
 I ended up making a Groza anyway. Pretty much just the AS VAL, more noisy but with slightly better stats once you attach a suppressor.
 ]]
 
-local wepBase = weapons:getData("base_weapon")
+-- getting reference to other weapons in case in we need to inherit some properties
 local famas = weapons:getData("famas")
 local asval = weapons:getData("asval")
-
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "ots14"
@@ -77,6 +77,7 @@ weapon.selectableMods = {{
     header = weapons.getModHeader("grip"),
     mods = {"comfort_grip"}
 }}
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 10
@@ -90,10 +91,9 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = famas.modIcons
+-- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
 weapon.modIcons.scope_4x = weapon.modIcons.scope_2x
 -- sounds
 weapon.fireSubsonicSuppressedSound = asval.fireSuppressedSound
 -- register and inherit missing properties
 weapons:register(weapon, "famas")
-
-weapon:update()

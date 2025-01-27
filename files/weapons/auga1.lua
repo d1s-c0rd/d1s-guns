@@ -1,8 +1,11 @@
 --[[
 Name: AUG A1
 Why I made this? First: I really really like the AUG. Second: I wanted to try making a gun with a fixed attachment (in this case a 1.5x scope that is actually just the 2x scope but with less sway when not focusing).
-]] local famas = weapons:getData("famas")
+]]
 
+-- getting reference to other weapons in case in we need to inherit some properties
+local famas = weapons:getData("famas")
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "auga1"
@@ -23,6 +26,7 @@ weapon.maxAmmo = weapon.magSize * 3
 weapon.rateOfFire = 720
 weapon.spreadPerShot = 0.7
 weapon.firemodes = {"fullauto", "semiauto"}
+-- scope stats
 weapon.aimConeWidth = 15
 weapon.cameraZoomMultAim = 1.35
 -- attachments
@@ -54,12 +58,14 @@ weapon.selectableMods = {{
     header = weapons.getModHeader("grip"),
     mods = {"comfort_grip"}
 }}
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 12
     }
 }
 weapon.modIcons = famas.modIcons
+-- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
 weapon.modIcons.match_barrel = weapon.modIcons.extended_barrel
 weapon.modIcons.shortened_barrel = weapon.modIcons.compensator
 

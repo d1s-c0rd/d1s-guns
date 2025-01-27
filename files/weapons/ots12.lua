@@ -5,10 +5,10 @@ This one in particular is supposed to be a modern American-made civilian replica
 Stats-wise I tried to make it ever so slightly worse than the AS VAL as to not completely invalidate it.
 ]]
 
-local wepBase = weapons:getData("base_weapon")
+-- getting reference to other weapons in case in we need to inherit some properties
 local ak47 = weapons:getData("ak47")
 local asval = weapons:getData("asval")
-
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "ots12"
@@ -88,6 +88,7 @@ weapon.selectableMods = {{
 weapon.modRequirements = {
     auto_trigger_group = {"improved_trigger"}
 }
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 10
@@ -101,6 +102,7 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = ak47.modIcons
+-- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
 weapon.modIcons.auto_trigger_group = weapon.modIcons.improved_trigger
 -- sounds
 weapon.fireSubsonicSuppressedSound = asval.fireSuppressedSound

@@ -11,7 +11,8 @@ local caliber = {
     display = "",
     -- display name of the ammo type
     switchDisplay = "",
-    -- list of descriptions to be added to the ammo attachment infobox
+    -- list of descriptions to add to the stats list shown when hovering the ammo type in the loadout screen (optional)
+    -- second parameter is a boolean that defines whether the description should be shown on top of the positives (green) or negatives (red)
     description = {},
     -- trivia about the ammo displayed when hovered in the loadout screen if a gun is chambered in it
     trivia = "",
@@ -25,8 +26,11 @@ local caliber = {
     -- used for ordering the ammo icon in the loadout screen
     power = 0,
     -- used for grouping ammo types
-    limitID = 0
+    limitID = 0,
+    -- values applied to the weapon when the ammo type is used
+    valueMods = {}
 }
+-- overrides are being done to inherit the pre-existing sprites and icons and for the value adjustments of the various ammo types
 -- .41 AE
 local caliber = {
     id = "41AE",
@@ -88,6 +92,7 @@ local caliber = {
 }
 ammo.register(caliber, "7.62x51MMM")
 -- .50 BMG +P
+-- I wanted to add a +P variant of .50 BMG, but since 7.62x51MM doesn't have a +P variant I'm using 45ACP Overpressure stats while using 7.62x51MM Subsonic sprites and icons
 local caliber = {
     id = "50BMGOP",
     price = 2000,
@@ -95,6 +100,7 @@ local caliber = {
     iconInactive = "caliber_762x51mm_ss_idle",
     display = _T("AMMO_50BMG", ".50 BMG"),
     switchDisplay = _T("AMMO_OVERPRESSURE", "Overpressure"),
+    -- here I'm copying the generic overpressure ammo description and adding a new one to the negatives
     description = {{_T("AMMO_GENERIC_OVERPRESSURE", "Overpressure ammo, which trades recoil for stopping power."), true},
                    {_T("AMMO_50BMG_OVERPRESSURE_WARRANTY", "Shooting these will void any warranty."), false}},
     world = {
@@ -102,12 +108,9 @@ local caliber = {
         box = "762x51mm_ss_box"
     },
     minimum = 10,
-    limitID = ammo.getLimitID("50BMG"),
-    valueMods = {{"damage", 0.1}, {"damageMin", 0.1}, {"bulletSpeed", 0.15}, {"shotDeviation", -0.05},
-                 {"spreadPerShot", 0.15}, {"spreadPerShotMultiplier", 0.07}, {"noiseRadius", 0.05},
-                 {"spreadDecrease", -0.05}}
+    limitID = ammo.getLimitID("50BMG")
 }
-ammo.register(caliber)
+ammo.register(caliber, "45ACPOP")
 -- Ammo list
 ammo.list50BMG = ammo.setupAmmoListReferences({"50BMG", "50BMGOP", "50BMGM"})
 -- .357 SIG
@@ -138,6 +141,7 @@ local caliber = {
 }
 ammo.register(caliber, "10MMAUTOSS")
 -- .357 SIG Overpressure
+-- I wanted to add a +P variant of .357 SIG, but since 10MM Auto doesn't have a +P variant I'm using 45ACP Overpressure stats while using 10MM Auto Match sprites and icons
 local caliber = {
     id = "357SIGOP",
     price = 1000,

@@ -21,7 +21,7 @@ function weapon:getFireSound()
         if self:isModActive("suppressor_nonpistol") then
             return "r870_fire_suppressed"
         end
-        return "r700_50bmg"
+        return "shot_50bmg"
     end
     return self._fireSound
 end

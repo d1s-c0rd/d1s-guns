@@ -3,10 +3,10 @@ Name: SPAS-12
 After I made the SPAS-15 I just had to make this too.
 ]]
 
-local wepBase = weapons:getData("base_weapon")
+-- getting reference to other weapons in case in we need to inherit some properties
 local m1014 = weapons:getData("m1014")
 local remington_870 = weapons:getData("remington_870")
-
+-- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
 weapon.id = "spas12"
@@ -59,6 +59,7 @@ weapon.selectableMods = {{
 weapon.modRequirements = {
     burst_trigger_group = {"improved_trigger"}
 }
+-- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
     extended_magazine = {
         magSize = 2
@@ -69,12 +70,8 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = m1014.modIcons
-weapon.modIcons.smaller_magazine = {
-    active = "m1014_mods_9",
-    idle = "m1014_mods_28",
-    hover = "m1014_mods_47",
-    align = gui.SIDES.RIGHT
-}
+-- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+weapon.modIcons.smaller_magazine = m1014.modIcons.extended_magazine
 -- sprites
 weapon.worldSprite = remington_870.worldSprite
 weapon.worldScale = remington_870.worldScale
