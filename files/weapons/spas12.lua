@@ -25,7 +25,6 @@ weapon.ammoOnGive = weapon.magSize * 4
 weapon.maxAmmo = 25
 -- stats
 weapon.rateOfFire = 350
-weapon.spreadPerShot = 1.8
 weapon.firemodes = {"semiauto"}
 -- attachments
 weapon.selectableMods = {{
@@ -70,7 +69,7 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = m1014.modIcons
--- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+-- if there are extra mods compared to the base weapon we're going to inherit from then we need to manually define their icons or else the game will crash when trying to applying the mods to the gun
 weapon.modIcons.smaller_magazine = m1014.modIcons.extended_magazine
 -- sprites
 weapon.worldSprite = remington_870.worldSprite
@@ -80,5 +79,8 @@ weapon.uiIconInactive = remington_870.uiIconInactive
 weapon.uiIconIdle = remington_870.uiIconIdle
 -- register and inherit missing properties
 weapons:register(weapon, "m1014")
+-- overrides
+weapon.bulletSpeed = m1014.bulletSpeed
+weapon.spreadPerShot = m1014.spreadPerShot
 -- override achievement check method just in case
 weapon._verifyWeaponModAchievements = nil

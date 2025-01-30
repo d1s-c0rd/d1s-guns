@@ -24,7 +24,6 @@ weapon.ammoOnGive = weapon.magSize * 2
 weapon.maxAmmo = weapon.magSize * 3
 weapon.ammoType = "40SW"
 weapon.ammoTypeList = ammo.list40SW
-weapon.bulletSpeed = 1205
 weapon.armorPenetration = 4
 -- damage
 weapon.damage = hs2000.damage
@@ -34,6 +33,7 @@ weapon.rangeMax = hs2000.rangeMax
 -- stats
 weapon.shotDeviation = 1.4
 weapon.spreadDelay = hs2000.spreadDelay
+-- copied from hs2000
 weapon.spreadPerShot = 0.55
 weapon.spreadPerShotMultiplier = hs2000.spreadPerShotMultiplier
 weapon.spreadVelocityIncrease = hs2000.spreadVelocityIncrease
@@ -84,8 +84,10 @@ weapon.modOverrides = {
     }
 }
 weapon.modIcons = p89.modIcons
--- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+-- if there are extra mods compared to the base weapon we're going to inherit from then we need to manually define their icons or else the game will crash when trying to applying the mods to the gun
 weapon.modIcons["9mm_magazine"] = p89.modIcons.smaller_magazine
 weapon.modIcons["357sig_magazine"] = p89.modIcons.smaller_magazine
 -- register and inherit missing properties
 weapons:register(weapon, "p89")
+-- overrides
+weapon.bulletSpeed = hs2000.bulletSpeed

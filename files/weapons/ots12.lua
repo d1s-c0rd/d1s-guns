@@ -102,7 +102,7 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = ak47.modIcons
--- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+-- if there are extra mods compared to the base weapon we're going to inherit from then we need to manually define their icons or else the game will crash when trying to applying the mods to the gun
 weapon.modIcons.auto_trigger_group = weapon.modIcons.improved_trigger
 -- sounds
 weapon.fireSubsonicSuppressedSound = asval.fireSuppressedSound

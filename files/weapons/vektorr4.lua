@@ -5,6 +5,7 @@ It's an AK but it shoots 5.56x45MM. Also bigger magazines.
 
 -- getting reference to other weapons in case in we need to inherit some properties
 local ar15 = weapons:getData("ar15")
+local g36c = weapons:getData("g36c")
 -- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
@@ -80,6 +81,6 @@ weapon.fireSubsonicSuppressedSound = ar15.fireSubsonicSuppressedSound
 -- register and inherit missing properties
 weapons:register(weapon, "ak47")
 -- overrides
--- ammo
 weapon.bulletSpeed = ar15.bulletSpeed
 weapon.noiseRadius = ar15.noiseRadius
+weapon.spreadPerShot = g36c.spreadPerShot

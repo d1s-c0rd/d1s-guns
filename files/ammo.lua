@@ -27,7 +27,7 @@ local caliber = {
     power = 0,
     -- used for grouping ammo types
     limitID = 0,
-    -- values applied to the weapon when the ammo type is used
+    -- modifiers applied to the weapon when the ammo type is used
     valueMods = {}
 }
 -- overrides are being done to inherit the pre-existing sprites and icons and for the value adjustments of the various ammo types
@@ -92,7 +92,7 @@ local caliber = {
 }
 ammo.register(caliber, "7.62x51MMM")
 -- .50 BMG +P
--- I wanted to add a +P variant of .50 BMG, but since 7.62x51MM doesn't have a +P variant I'm using 45ACP Overpressure stats while using 7.62x51MM Subsonic sprites and icons
+-- I wanted to add a +P variant of .50 BMG, but since 7.62x51MM doesn't have a +P variant I'm using 45ACP Overpressure to inherit valueMods while using 7.62x51MM Subsonic sprites and icons
 local caliber = {
     id = "50BMGOP",
     price = 2000,
@@ -141,7 +141,7 @@ local caliber = {
 }
 ammo.register(caliber, "10MMAUTOSS")
 -- .357 SIG Overpressure
--- I wanted to add a +P variant of .357 SIG, but since 10MM Auto doesn't have a +P variant I'm using 45ACP Overpressure stats while using 10MM Auto Match sprites and icons
+-- I wanted to add a +P variant of .357 SIG, but since 10MM Auto doesn't have a +P variant I'm using 45ACP Overpressure to inherit valueMods while using 10MM Auto Match sprites and icons
 local caliber = {
     id = "357SIGOP",
     price = 1000,

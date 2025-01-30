@@ -75,12 +75,15 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = saiga12k.modIcons
--- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+-- if there are extra mods compared to the base weapon we're going to inherit from then we need to manually define their icons or else the game will crash when trying to applying the mods to the gun
 weapon.modIcons.extended_magazine = saiga12k.modIcons.drum_magazine
 -- sprites
 weapon.worldSprite = ar15.worldSprite
 weapon.worldScale = ar15.worldScale
 -- register and inherit missing properties
 weapons:register(weapon, "saiga12k")
+-- overrides
+weapon.bulletSpeed = saiga12k.bulletSpeed
+weapon.spreadPerShot = saiga12k.spreadPerShot
 -- override achievement check method just in case
 weapon._verifyWeaponModAchievements = nil

@@ -38,6 +38,7 @@ weapon.spread = asval.spread
 weapon.shotDeviation = asval.shotDeviation
 weapon.focusSpread = asval.focusSpread
 weapon.spreadDelay = asval.spreadDelay
+-- copied from asval
 weapon.spreadPerShot = 0.64
 weapon.spreadPerShotMultiplier = asval.spreadPerShotMultiplier
 weapon.spreadVelocityIncrease = asval.spreadVelocityIncrease
@@ -91,7 +92,7 @@ weapon.modOverrides = {
 }
 weapon.modConflicts = {}
 weapon.modIcons = famas.modIcons
--- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+-- if there are extra mods compared to the base weapon we're going to inherit from then we need to manually define their icons or else the game will crash when trying to applying the mods to the gun
 weapon.modIcons.scope_4x = weapon.modIcons.scope_2x
 -- sounds
 weapon.fireSubsonicSuppressedSound = asval.fireSuppressedSound

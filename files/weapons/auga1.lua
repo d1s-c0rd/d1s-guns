@@ -24,7 +24,6 @@ weapon.ammoOnGive = weapon.magSize * 2
 weapon.maxAmmo = weapon.magSize * 3
 -- stats
 weapon.rateOfFire = 720
-weapon.spreadPerShot = 0.7
 weapon.firemodes = {"fullauto", "semiauto"}
 -- scope stats
 weapon.aimConeWidth = 15
@@ -65,12 +64,14 @@ weapon.modOverrides = {
     }
 }
 weapon.modIcons = famas.modIcons
--- if there are extra mods compared to the base weapon we're going to inherit from we need to manually define their icons, or the game will crash when trying to applying them to the gun
+-- if there are extra mods compared to the base weapon we're going to inherit from then we need to manually define their icons or else the game will crash when trying to applying the mods to the gun
 weapon.modIcons.match_barrel = weapon.modIcons.extended_barrel
 weapon.modIcons.shortened_barrel = weapon.modIcons.compensator
-
 -- register and inherit missing properties
 weapons:register(weapon, "famas")
+-- overrides
+weapon.bulletSpeed = famas.bulletSpeed
+weapon.spreadPerShot = famas.spreadPerShot
 -- methods for handling scope sway copied from scope_2x.lua, values tweaked for less sway
 function weapon:update()
     local owner = self.getOwner(self)
