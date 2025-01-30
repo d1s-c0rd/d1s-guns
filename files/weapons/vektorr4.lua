@@ -84,3 +84,4 @@ weapons:register(weapon, "ak47")
 weapon.bulletSpeed = ar15.bulletSpeed
 weapon.noiseRadius = ar15.noiseRadius
 weapon.spreadPerShot = g36c.spreadPerShot
+weapon.casingConfig = ar15.casingConfig
