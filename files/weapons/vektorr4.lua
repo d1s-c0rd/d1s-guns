@@ -25,6 +25,7 @@ weapon.ammoOnGive = weapon.magSize * 2
 weapon.maxAmmo = weapon.magSize * 3
 weapon.ammoType = "5.56x45MM"
 weapon.ammoTypeList = ammo.list556x45MM
+weapon.casingConfig = ar15.casingConfig
 weapon.armorPenetration = ar15.armorPenetration
 -- damage
 weapon.damage = ar15.damage
@@ -84,4 +85,3 @@ weapons:register(weapon, "ak47")
 weapon.bulletSpeed = ar15.bulletSpeed
 weapon.noiseRadius = ar15.noiseRadius
 weapon.spreadPerShot = g36c.spreadPerShot
-weapon.casingConfig = ar15.casingConfig
