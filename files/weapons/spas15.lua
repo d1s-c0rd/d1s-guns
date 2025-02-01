@@ -13,7 +13,7 @@ weapon.id = "spas15"
 weapon.name = _T("WEAPON_NAME_SPAS15", "SPAS-15")
 weapon.trivia = _T("WEAPON_NAME_SPAS15_TRIVIA",
     "A further development of the SPAS-12, it retains the dual pump-action/semi-auto firing modes but uses detachable magazines instead of a traditional internal magazine tube.")
-weapon.price = 7000
+weapon.price = 7500
 weapon.type = weapons.TYPES.PRIMARY
 weapon.category = weapons.CATEGORIES.SHOTGUN
 weapon.NPC = true

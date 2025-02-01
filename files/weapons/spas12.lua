@@ -13,7 +13,7 @@ weapon.id = "spas12"
 weapon.name = _T("WEAPON_NAME_SPAS12", "SPAS-12")
 weapon.trivia = _T("WEAPON_NAME_SPAS12_TRIVIA",
     "Combat shotgun for military and police applications with dual pump-action/semi-auto firing modes.\n\nLooks really mean.")
-weapon.price = 8500
+weapon.price = 6000
 weapon.type = weapons.TYPES.PRIMARY
 weapon.category = weapons.CATEGORIES.SHOTGUN
 weapon.NPC = true
