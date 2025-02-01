@@ -18,7 +18,7 @@ mod.ammoList = ammo.list357SIG
 -- values applied to the weapon when the mod is installed
 mod.valueMods = {{"shotDeviation", -0.15}, {"spreadPerShotMultiplier", 0.1}, {"noiseChange", 0.05, "+"},
                  {"bulletSpeed", 0.15}, {"damage", 0.15}, {"damageMin", 0.15}, {"spreadPerShot", -0.1},
-                 {"slowdown", 0.003, "+"}}
+                 {"slowdown", 0.003, "+"}, {"magSize", 0, "+"}}
 -- should the mod be unlocked for all weapons when purchased?
 mod.universalUnlock = false
 -- is the mod needed to be purchased to unlock the Gun Schizo achievement?

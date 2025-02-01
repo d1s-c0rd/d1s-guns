@@ -11,6 +11,7 @@ require("weapon_attachments/50bmg_magazine")
 -- load overrides
 require("overrides/mini_uzi")
 require("overrides/r700")
+require("overrides/10mm_magazine")
 -- load weapons
 require("weapons/spas15")
 require("weapons/spas12")
