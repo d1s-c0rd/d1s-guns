@@ -16,7 +16,7 @@ require("weapons/spas15")
 require("weapons/spas12")
 require("weapons/ots12")
 require("weapons/auga1")
-require("weapons/vektorr4")
+require("weapons/vektor5")
 require("weapons/ots14")
 require("weapons/p226")
 require("weapons/p229")
@@ -27,7 +27,7 @@ local addWeapons = {
 	{weapons.TYPES.PRIMARY, "spas12", "m1014"},
 	{weapons.TYPES.PRIMARY, "ots14", "asval"},
 	{weapons.TYPES.PRIMARY, "ots12", "asval"},
-	{weapons.TYPES.PRIMARY, "vektorr4", "g36c"},
+	{weapons.TYPES.PRIMARY, "vektor5", "g36c"},
 	{weapons.TYPES.PRIMARY, "auga1", "famas"},
 	{weapons.TYPES.SECONDARY, "p229", "p89"},
 	{weapons.TYPES.SECONDARY, "p226", "p89"},
