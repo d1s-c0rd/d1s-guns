@@ -9,7 +9,7 @@ local g36c = weapons:getData("g36c")
 -- instancing an empty table for our weapon
 local weapon = {}
 -- basic data
-weapon.id = "vektorr4"
+weapon.id = "vektor5"
 weapon.name = _T("WEAPON_NAME_VEKTOR_R5", "Vektor R5")
 weapon.trivia = _T("WEAPON_NAME_VEKTOR_R5_TRIVIA",
     "South African license-manufactured copy of the Galil SAR 5.56x45MM carbine.")

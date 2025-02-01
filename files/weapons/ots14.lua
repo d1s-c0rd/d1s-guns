@@ -12,7 +12,7 @@ local weapon = {}
 weapon.id = "ots14"
 weapon.name = _T("WEAPON_NAME_OTS14", "OTs-14 Groza")
 weapon.trivia = _T("WEAPON_NAME_OTS14_TRIVIA",
-    "Bullpup assault rifle designed for close quarters and stealth operations.\n\n\'Groza\' means \'Storm\'")
+    "Bullpup assault rifle designed for close quarters and stealth operations.\n\n\'Groza\' means \'Storm\'.")
 weapon.price = 8500
 weapon.type = weapons.TYPES.PRIMARY
 weapon.category = weapons.CATEGORIES.RIFLE
