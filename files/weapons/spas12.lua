@@ -21,8 +21,8 @@ weapon.unique = false
 weapon.concealable = false
 -- ammo
 weapon.magSize = 6
-weapon.ammoOnGive = weapon.magSize * 4
-weapon.maxAmmo = 25
+weapon.ammoOnGive = weapon.magSize * 3
+weapon.maxAmmo = weapon.magSize * 4
 -- stats
 weapon.rateOfFire = 350
 weapon.firemodes = {"semiauto"}
