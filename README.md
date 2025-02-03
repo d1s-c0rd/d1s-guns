@@ -19,6 +19,13 @@ Most stats of the guns contained in this project are inherited from other base g
 
 **IMPORTANT**: Weapons can inherit the attachments table (e.g., the G36C inherits the AR-15 `selectableMods` table) from other weapons or use shared tables (many pistols use the same `weapons.genericPistolMods` table, and my P226 does as well). As a side effect, any override of the `selectableMods` table will be replicated across every other weapon using the same table (whether inherited or shared) due to reference assignment to the table.
 
+#### DLC data support
+
+If you are using data from DLCs in your mod (either by inheriting properties or modifying them) you should account for the possibility that the user does not own the DLC. Attempting to start the game with a mod that tries referencing nonexistent data will cause the program to crash: it is then necessary to prepare safety nets and manage fallbacks.
+
+I have included a couple of examples on how to handle DLC checks: in `main.lua` there is an example of how to manage the loading of modules, while in the LC Charger file you will find an example of how to handle properties from DLCs.
+An alternative could also be to separate modules that use DLC data into their own mod. The choice on how to handle DLC support is ultimately up to you.
+
 ### Properties
 
 Please check the P226 file for detailed documentation of the basic properties of weapons.
@@ -65,6 +72,9 @@ Assault rifle in 5.56x45MM
 
 #### AUG A1
 Bullpup assault rifle in 5.56x45MM with integrated optic
+
+#### LC Charger
+Semi-automatic pistol (primary) in 5.7x28MM (10MM conversions available) (Full-auto trigger group available)
 
 #### P226
 Semi-automatic pistol in 9x19MM
