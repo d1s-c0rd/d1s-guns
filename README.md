@@ -2,18 +2,22 @@
 
 ## Overview
 This mod adds new weapons and attachments to Intravenous 2 using existing game content as a base.
+
 The project serves as a foundation for those interested in basic modding of Intravenous 2 guns and attachments.
+
 You are free to edit and reuse the code included in this project for your own purposes.
 
 ## Notes
 This mod's content is what I would consider "low effort," as no custom graphics are provided by me for the new weapons and attachments. As such, I've decided against publishing this on the Steam Workshop for the time being.
 Nonetheless, included are the .41 AE caliber conversion for the Mini-UZI and the .50 BMG caliber conversion for the R700 (both mods I’ve published on the Workshop).
+
 The balance of the guns and attachments is not guaranteed, so feel free to tweak them to your own liking if you use them in gameplay.
 
 ### On data inheritance
 
-Most stats of the guns contained in this project are inherited from other base game guns; as such, many properties might not be declared in the included files. Sprites and animations are inherited in the same manner.
-**IMPORTANT**: Weapons may inherit the attachments table (e.g., the G36C inherits the AR-15 `selectableMods` table) from other weapons or use shared tables (many pistols use the same `weapons.genericPistolMods` table, and my P226 does as well). As a side effect, any override of the `selectableMods` table will be replicated across every other weapon using the same table (whether inherited or shared) due to reference assignment to the table.
+Most stats of the guns contained in this project are inherited from other base game guns; as such, many properties won't be declared in the included files. Sprites and animations are inherited in the same manner.
+
+**IMPORTANT**: Weapons can inherit the attachments table (e.g., the G36C inherits the AR-15 `selectableMods` table) from other weapons or use shared tables (many pistols use the same `weapons.genericPistolMods` table, and my P226 does as well). As a side effect, any override of the `selectableMods` table will be replicated across every other weapon using the same table (whether inherited or shared) due to reference assignment to the table.
 
 ### Properties
 
@@ -33,7 +37,7 @@ Following is a list of notable properties overridden within `weapons:register()`
 #### Attachments valueMods and weapons modOverrides
 The `valueMods` table property of attachments contains the various properties that the attachment modifies. Meanwhile the `modOverrides` table property of weapons contains adjustments for the property modifiers of any attachment.
 
-Due to how `modOverrides` works in the code, only overrides of modifiers already existing in the original valueMods will take effect. As an example, in the base game, `10mm_magazine` doesn't have `magSize`in its `valueMods`: as a side effect if you try to use `modOverrides` to override the magazine size of a weapon when using the 10MM Caliber Conversion it won't work (included in this mod is a patch that adds `magSize` to `10mm_magazine`).
+Due to how `modOverrides` works in the code, only overrides of modifiers already existing in the original valueMods will take effect. As an example, in the base game, `10mm_magazine` doesn't have `magSize`in its `valueMods`: as a side effect if you try to use `modOverrides` to override the magazine size of a weapon when using the 10MM Caliber Conversion it won't work (included in this mod is a patch that adds `magSize` to the `valueMods` table of `10mm_magazine`).
 
 ## Installation
 1. Download the project as zip
