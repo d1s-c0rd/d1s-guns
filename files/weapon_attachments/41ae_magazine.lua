@@ -17,7 +17,8 @@ mod.description = {{_T("WEAPON_MOD_41AE_CALIBER_CONVERSION_DESC", "Converts the 
 mod.ammoList = ammo.list41AE
 -- values applied to the weapon when the mod is installed
 mod.valueMods = {{"shotDeviation", -0.05}, {"spreadPerShotMultiplier", 0.1}, {"bulletSpeed", -0.1}, {"damage", 0.2},
-                 {"damageMin", 0.2}, {"spreadPerShot", 0.15}, {"maxSpreadIncrease", 0.2}, {"magSize", 0, "+"}}
+                 {"damageMin", 0.2}, {"spreadPerShot", 0.15}, {"maxSpreadIncrease", 0.2}, {"magSize", 0, "+"},
+                 {"armorPenetration", 0, "+"}}
 -- should the mod be unlocked for all weapons when purchased?
 mod.universalUnlock = false
 -- is the mod needed to be purchased to unlock the Gun Schizo achievement?

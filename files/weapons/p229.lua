@@ -77,10 +77,12 @@ weapon.modOverrides = {
     ["9mm_magazine"] = {
         magSize = 7,
         damage = -0.12,
-        damageMin = -0.12
+        damageMin = -0.12,
+        armorPenetration = 0
     },
     ["357sig_magazine"] = {
-        magSize = 2
+        magSize = 2,
+        armorPenetration = 1
     }
 }
 weapon.modIcons = p89.modIcons

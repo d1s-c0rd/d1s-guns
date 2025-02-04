@@ -65,7 +65,7 @@ weapon.selectableMods = {{
     mods = {"comfort_grip"}
 }}
 weapon.modRequirements = {
-    auto_trigger_group = {"improved_trigger"}
+    auto_trigger_group = {"improved_trigger"},
 }
 -- overriding the attachments modifier values for this particular weapon
 weapon.modOverrides = {
@@ -81,7 +81,8 @@ weapon.modOverrides = {
     ["10mm_magazine"] = {
         magSize = 10,
         damage = 0.4,
-        damageMin = 0.4
+        damageMin = 0.4,
+        armorPenetration = -1
     }
 }
 weapon.modConflicts = {}
