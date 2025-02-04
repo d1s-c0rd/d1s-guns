@@ -91,7 +91,7 @@ weapon.modIcons.auto_trigger_group = mp7.modIcons.improved_trigger
 weapon.modIcons["10mm_magazine"] = mp7.modIcons.extended_magazine
 -- register and inherit missing properties
 weapons:register(weapon, "mp7")
--- very crude DLC check: if P90 weapon data exists then inherit some properties from it, else inherit from MP7 as fallback
+-- very crude DLC/data check: if P90 weapon data exists then inherit some properties from it, else inherit from MP7 as fallback
 if p90 then
     -- ammo
     -- 5.7x28MM ammo is defined in the supporter DLC, so it can only be used if the DLC is present

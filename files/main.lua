@@ -58,15 +58,20 @@ end
 
 -- method for checking DLC data
 function d1s_guns.checkDLC()
---[[
-This is currently just a placeholder method, but it could be used to load modules only if certain DLCs are present or to load a different set of modules instead.
-Example:
-if *your DLC check* then
-	require("module that uses DLC data")
-else
-	require("module that doesn't use DLC data")
-end
-]]
+	-- very crude DLC/data check
+	local fiveseven = weapons:getData("fiveseven")
+	if fiveseven then
+		require("weapons/hkucp")
+		table.insert(d1s_guns.addWeapons, {weapons.TYPES.SECONDARY, "hkucp", "fiveseven"})
+	end
+	--[[
+	We could potentially load alternative modules if the DLC were missing:
+	if *your DLC/data check* then
+		require("module that uses data")
+	else
+		require("alternative module that doesn't use data")
+	end
+	]]
 end
 
 -- method for adding weapons to the loadout screen using addWeapons table
