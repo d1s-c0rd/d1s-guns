@@ -25,3 +25,21 @@ mod.universalUnlock = false
 mod.countForGunSchizo = false
 -- register and inherit missing properties
 weapons.registerWeaponMod(mod, "10mm_magazine")
+
+-- overriding the onAdded and onRemoved methods from 10mm_magazine to adjust the ammoOnGive value
+-- this will halve the amount of reserve ammo given from the loadout screen from 20 to 10 for the R700
+function mod:onAdded(wep)
+    -- saving original ammoOnGive value
+    wep._ammoOnGive = wep.ammoOnGive
+    -- overriding ammoOnGive value by halving it
+    wep.ammoOnGive = math.floor(wep.ammoOnGive/2)
+    wep:setAmmoTypeList(self.ammoList)
+    self:onCaliberChanged(wep)
+end
+
+function mod:onRemoved(wep)
+    -- restoring original ammoOnGive value
+    wep.ammoOnGive = wep._ammoOnGive
+    wep:setAmmoTypeList()
+    self:onCaliberChanged(wep)
+end
