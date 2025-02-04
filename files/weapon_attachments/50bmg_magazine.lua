@@ -29,17 +29,17 @@ weapons.registerWeaponMod(mod, "10mm_magazine")
 -- overriding the onAdded and onRemoved methods from 10mm_magazine to adjust the ammoOnGive value
 -- this will halve the amount of reserve ammo given from the loadout screen from 20 to 10 for the R700
 function mod:onAdded(wep)
-    -- saving original ammoOnGive value
-    wep._ammoOnGive = wep.ammoOnGive
+    local origWep = weapons:getData(wep:getID())
     -- overriding ammoOnGive value by halving it
-    wep.ammoOnGive = math.floor(wep.ammoOnGive / 2)
+    wep.ammoOnGive = math.floor(origWep.ammoOnGive / 2)
     wep:setAmmoTypeList(self.ammoList)
     self:onCaliberChanged(wep)
 end
 
 function mod:onRemoved(wep)
+    local origWep = weapons:getData(wep:getID())
     -- restoring original ammoOnGive value
-    wep.ammoOnGive = wep._ammoOnGive
+    wep.ammoOnGive = origWep.ammoOnGive
     wep:setAmmoTypeList()
     self:onCaliberChanged(wep)
 end

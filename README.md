@@ -74,7 +74,7 @@ Assault rifle in 5.56x45MM
 Bullpup assault rifle in 5.56x45MM with integrated optic
 
 #### LC Charger
-Semi-automatic pistol (primary) in 5.7x28MM (10MM conversions available) (Full-auto trigger group available)
+Semi-automatic pistol (primary) in 5.7x28MM (10MM conversion available) (Full-auto trigger group available)
 
 #### P226
 Semi-automatic pistol in 9x19MM
