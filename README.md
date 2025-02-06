@@ -8,7 +8,7 @@ The project serves as a foundation for those interested in basic modding of Intr
 You are free to edit and reuse the code included in this project for your own purposes.
 
 ## Notes
-This mod's content is what I would consider "low effort," as no custom graphics are provided by me for the new weapons and attachments. As such, I've decided against publishing this on the Steam Workshop for the time being.
+This mod's content is what I would consider "low effort," as no custom graphics are provided by me for the new weapons and attachments, using instead base game content as stand-ins. As such, I've decided against publishing this on the Steam Workshop for the time being.
 Nonetheless, included are the .41 AE caliber conversion for the Mini-UZI and the .50 BMG caliber conversion for the R700 (both mods I’ve published on the Workshop).
 
 The balance of the guns and attachments is not guaranteed, so feel free to tweak them to your own liking if you use them in gameplay.
