@@ -19,6 +19,7 @@ weapon.category = weapons.CATEGORIES.SHOTGUN
 weapon.NPC = true
 weapon.unique = false
 weapon.concealable = false
+weapon.SHOTGUN = true
 -- ammo
 weapon.magSize = 6
 weapon.ammoOnGive = weapon.magSize * 3
