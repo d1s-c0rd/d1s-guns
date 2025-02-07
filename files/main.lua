@@ -64,6 +64,11 @@ function d1s_guns.checkDLC()
 		require("weapons/hkucp")
 		table.insert(d1s_guns.addWeapons, {weapons.TYPES.SECONDARY, "hkucp", "fiveseven"})
 	end
+	local revolver = weapons:getData("revolver")
+	if revolver then
+		require("weapons/44automag")
+		table.insert(d1s_guns.addWeapons, {weapons.TYPES.SECONDARY, "44automag", "deagle"})
+	end
 	local m1911 = weapons:getData("m1911")
 	if m1911 then
 		require("overrides/m1911_grizzly")

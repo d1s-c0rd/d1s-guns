@@ -144,6 +144,9 @@ Semi-automatic pistol in 9x19MM
 #### P229
 Semi-automatic pistol in .40S&W (9x19MM and .357 SIG conversions available)
 
+#### .44 Auto Mag Pistol
+Semi-automatic pistol in .44 Magnum
+
 ### New attachments:
 
 #### .357 SIG Caliber Conversion
