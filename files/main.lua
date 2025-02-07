@@ -35,11 +35,11 @@ function d1s_guns.load()
 	require("weapon_attachments/shortened_barrel")
 	require("weapon_attachments/357sig_magazine")
 	require("weapon_attachments/41ae_magazine")
+	require("weapon_attachments/50ae_magazine")
 	require("weapon_attachments/50bmg_magazine")
 	-- load overrides
 	require("overrides/mini_uzi")
 	require("overrides/r700")
-	require("overrides/10mm_magazine")
 	-- load weapons
 	require("weapons/spas15")
 	require("weapons/spas12")
@@ -64,6 +64,11 @@ function d1s_guns.checkDLC()
 		require("weapons/hkucp")
 		table.insert(d1s_guns.addWeapons, {weapons.TYPES.SECONDARY, "hkucp", "fiveseven"})
 	end
+	local m1911 = weapons:getData("m1911")
+	if m1911 then
+		require("overrides/m1911_grizzly")
+		require("overrides/m1911_colt_delta_elite")
+	end
 	--[[
 	We could potentially load alternative modules if the DLC were missing:
 	if *your DLC/data check* then
@@ -87,3 +92,7 @@ end
 -- rest of data to be loaded before the ON_START_FINISH event is fired
 -- load sounds
 require("sounds")
+-- load patches
+require("patches/9mm_magazine")
+require("patches/10mm_magazine")
+require("patches/45acp_magazine")

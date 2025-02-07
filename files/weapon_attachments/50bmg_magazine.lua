@@ -16,9 +16,10 @@ mod.description = {{_T("WEAPON_MOD_50BMG_CALIBER_CONVERSION_DESC", "Converts the
 -- simply set it to the ammo list you want to use and inherit an already existing caliber conversion mod
 mod.ammoList = ammo.list50BMG
 -- values applied to the weapon when the mod is installed
-mod.valueMods = {{"shotDeviation", -0.05}, {"spreadPerShotMultiplier", 0.6}, {"bulletSpeed", 0.1}, {"damage", 0.75},
-                 {"damageMin", 0.75}, {"spreadPerShot", 0.6}, {"maxSpreadIncrease", 0.6}, {"magSize", 0, "+"},
-                 {"noiseRadius", 0.64}, {"reloadSpeedMultiplier", 0.5}, {"armorPenetration", 0, "+"}}
+mod.valueMods = {{"armorPenetration", 0, "+"}, {"bulletSpeed", 0.1}, {"damage", 0.75}, {"damageMin", 0.75},
+                 {"magSize", 0, "+"}, {"maxSpreadIncrease", 0.6}, {"noiseChange", 0, "+"}, {"noiseRadius", 0.64},
+                 {"reloadSpeedMultiplier", 0.5}, {"shotDelay", 0}, {"shotDeviation", -0.05}, {"slowdown", 0.03, "+"},
+                 {"spreadPerShot", 0.6}, {"spreadPerShotMultiplier", 0.6}}
 -- should the mod be unlocked for all weapons when purchased?
 mod.universalUnlock = false
 -- is the mod needed to be purchased to unlock the Gun Schizo achievement?
