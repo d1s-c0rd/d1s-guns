@@ -118,13 +118,13 @@ Following is a reference sheet for how weapon properties are computed into stats
 ### New Guns:
 
 #### SPAS-12
-Semi-auto tube-fed shotgun in 12 Gauge (3-Round Burst trigger group available) (Mostly a M4 Super 90 clone)
+Semi-automatic tube-fed shotgun in 12 Gauge (3-Round Burst trigger group available) (Mostly a M4 Super 90 clone)
 
 #### SPAS-15
-Semi-auto magazine-fed shotgun in 12 Gauge (Full-auto trigger group available) (Mostly a Saiga-12K clone)
+Semi-automatic magazine-fed shotgun in 12 Gauge (Full-auto trigger group available) (Mostly a Saiga-12K clone)
 
 #### OTs-12 Tiss
-Semi-auto carbine in 9x39MM (Full-auto trigger group available)
+Semi-automatic carbine in 9x39MM (Full-auto trigger group available)
 
 #### OTs-14 Groza
 Bullpup assault rifle in 9x39MM
@@ -137,6 +137,9 @@ Bullpup assault rifle in 5.56x45MM with integrated optic
 
 #### LC Charger
 Semi-automatic pistol (primary) in 5.7x28MM (10MM conversion available) (Full-auto trigger group available)
+
+#### MAG-7
+Semi-auto magazine-fed shotgun in 12 Gauge
 
 #### P226
 Semi-automatic pistol in 9x19MM

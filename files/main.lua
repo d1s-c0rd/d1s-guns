@@ -23,6 +23,7 @@ d1s_guns.addWeapons = {
 	{weapons.TYPES.PRIMARY, "vektor5", "g36c"},
 	{weapons.TYPES.PRIMARY, "auga1", "famas"},
 	{weapons.TYPES.PRIMARY, "lccharger", "mp7"},
+	{weapons.TYPES.PRIMARY, "mag7", "sawn_off_shotgun"},
 	{weapons.TYPES.SECONDARY, "p229", "p89"},
 	{weapons.TYPES.SECONDARY, "p226", "p89"},
 }
@@ -50,6 +51,7 @@ function d1s_guns.load()
 	require("weapons/p226")
 	require("weapons/p229")
 	require("weapons/lccharger")
+	require("weapons/mag7")
 
 	d1s_guns.checkDLC()
 
