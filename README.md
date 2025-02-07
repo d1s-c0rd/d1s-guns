@@ -42,11 +42,73 @@ Following is a list of notable properties overridden within `weapons:register()`
 - `bulletSpeed` -> `bulletSpeed * FPS_TO_MS` (`FPS_TO_MS` = `2.296588` | as such the raw value of bulletSpeed is in ft/s) (property modified inside `adjustMuzzleVelocity()`)
 
 #### Attachments valueMods and weapons modOverrides
+
 The `valueMods` table property of attachments contains the various properties that the attachment modifies. Meanwhile the `modOverrides` table property of weapons contains adjustments for the property modifiers of any attachment.
 
 Due to how `modOverrides` works in the code, only overrides of modifiers already existing in the original valueMods will take effect. As an example, in the base game, `10mm_magazine` doesn't have `magSize`in its `valueMods`: as a side effect if you try to use `modOverrides` to override the magazine size of a weapon when using the 10MM Caliber Conversion it won't work (included in this mod is a patch that adds `magSize` to the `valueMods` table of `10mm_magazine`).
 
+#### Weapon stats
+
+Following is a reference sheet for how weapon properties are computed into stats.
+
+**IMPORTANT**: the properties `noiseRadius`, `spreadPerShot` and `bulletSpeed` referenced below have already been modified as explained in the "[Property override](#property-override)" paragraph.
+
+**Constants**:
+
+- `PIXEL_TO_MS` = 30.5
+
+**Damage per shot**
+- Value = `damage` * `shots` (`shots` is generally 1 unless it's a shotgun)
+- Total shot damage = `damage` * `shots` (`shots` is generally 1 unless it's a shotgun)
+- Minimum damage = `damageMin`
+- Effective range (M) = `rangeTotal` / `PIXEL_TO_MS` (`rangeTotal` = `rangeMin` + `rangeMax`)
+
+**Accuracy**
+- Value (°) = (if `clumpSpread` is defined) `clumpSpread` + `shotDeviation` (else) `spread` + `shotDeviation`
+- Spread per shot (°) = `spreadPerShot`
+- Max additive spread (°) = `maxSpreadIncrease`
+- Max movement spread increase (%) = `spreadVelocityMax`
+- Max turn spread increase (°) = `lookSpreadMax`
+- Turn accuracy instability = `lookSpreadAngleMultiplier`
+
+**Penetration**
+- Value = `armorPenetration`
+
+**Noise increase**
+- Value (%) = `noiseChange` * 100
+
+**Shot noise**
+- Value (M) = `noiseRadius` / `PIXEL_TO_MS`
+
+**Slowdown**
+- Value (%) = `slowdown` * 100
+
+**Weapon stats**:
+
+- Total damage = `damage` * `shots` (`shots` is generally 1 unless it's a shotgun)
+- Bullet speed (M/S) = `bulletSpeed` / `PIXEL_TO_MS`
+- Rate of Fire = `rateOfFire`
+- Magazine capacity = `magSize`
+- Reload speed (%) = (1 + (1 - `reloadSpeedMultiplier`)) * 100
+- Accuracy (°) = `spread`
+- Shot deviation (°) = `shotDeviation`
+- Accuracy recovery = `spreadDecrease` / 20
+- Aim zoom range (%) = `cameraZoomMultAim` * 100
+- Pellet group spread (°) = `clumpSpread`
+- Spread-per-shot (°) = `spreadPerShot`
+- Controllability (%) = (2.8 / `spreadPerShotMultiplier`) * 100
+- Max additive spread (°) = `maxSpreadIncrease`
+- Turn accuracy instability = `lookSpreadAngleMultiplier`
+- Max turn spread (°) = `lookSpreadMax`
+- Mobile accuracy (%) = (`spreadVelocityIncrease` / `maxSpreadVelocityIncrease`) * 100
+- Focus accuracy boost (°) = `focusSpread`
+- Focus accuracy speed = `focusSpreadSpeed`
+- Shot noise (M) = `noiseRadius` / `PIXEL_TO_MS`
+- Noise increase (%) = `noiseChange` * 100
+- Slowdown (%) = `slowdown` * 100
+
 ## Installation
+
 1. Download the project as zip
 2. Create a new `d1s_guns` folder inside your Intravenous 2 mods directory
 3. Extract the contents of the zip to the `d1s_guns` mod folder
@@ -97,4 +159,5 @@ Available for R700 (includes custom firing sound)
 Available for AUG
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for more details.

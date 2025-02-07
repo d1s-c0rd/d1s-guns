@@ -24,7 +24,7 @@ weapon.ammoOnGive = weapon.magSize * 2
 weapon.maxAmmo = weapon.magSize * 3
 weapon.ammoType = "40SW"
 weapon.ammoTypeList = ammo.list40SW
-weapon.armorPenetration = 4
+weapon.armorPenetration = hs2000.armorPenetration
 -- damage
 weapon.damage = hs2000.damage
 weapon.damageMin = hs2000.damageMin
