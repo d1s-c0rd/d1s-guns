@@ -60,7 +60,8 @@ end
 
 -- method for checking DLC data
 function d1s_guns.checkDLC()
-	-- very crude DLC/data check
+	-- basic DLC/data check
+	-- we're skipping loading modules if the needed data is missing
 	local fiveseven = weapons:getData("fiveseven")
 	if fiveseven then
 		require("weapons/hkucp")
@@ -73,8 +74,8 @@ function d1s_guns.checkDLC()
 	end
 	local m1911 = weapons:getData("m1911")
 	if m1911 then
-		--require("overrides/m1911_grizzly")
-		--require("overrides/m1911_colt_delta_elite")
+		require("overrides/m1911_grizzly")
+		require("overrides/m1911_colt_delta_elite")
 	end
 	--[[
 	We could potentially load alternative modules if the DLC were missing:

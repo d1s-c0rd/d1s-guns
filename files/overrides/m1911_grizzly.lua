@@ -23,7 +23,7 @@ weapon.modOverrides["50ae_magazine"] = {
     spreadPerShotMultiplier = 0.4,
     spreadPerShot = 1.5,
     maxSpreadIncrease = 0.3,
-    noiseRadius = 0.26
+    noiseRadius = 0.22
 }
 -- IMPORTANT: call setupModCategoryMap() on the weapon to update the mod category map or the attachment won't be registered for the weapon and won't work
 -- previous versions called weapons.register(weapon) to update the weapon but this causes stats to be incorrectly changed by the internal logic of the register method

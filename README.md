@@ -21,7 +21,7 @@ Most stats of the guns contained in this project are inherited from other base g
 
 #### DLC data support
 
-If you are using data from DLCs in your mod (either by inheriting properties or modifying them) you should account for the possibility that the user does not own the DLC. Attempting to start the game with a mod that tries referencing nonexistent data will cause the program to crash: it is then necessary to prepare safety nets and manage fallbacks.
+If you are using data from DLCs in your mod (either by inheriting properties or modifying them) you should account for the possibility that the user does not own the DLC. Attempting to start the game with a mod that tries referencing nonexistent data will cause the program to crash: as such it is necessary to prepare safety nets and manage fallbacks.
 
 I have included a couple of examples on how to handle DLC checks: in `main.lua` there is an example of how to manage the loading of modules, while in the LC Charger file you will find an example of how to handle properties from DLCs.
 An alternative could also be to separate modules that use DLC data into their own mod. The choice on how to handle DLC support is ultimately up to you.
@@ -129,7 +129,7 @@ Semi-automatic carbine in 9x39MM (Full-auto trigger group available)
 #### OTs-14 Groza
 Bullpup assault rifle in 9x39MM
 
-#### Vektor R4
+#### Vektor R5
 Assault rifle in 5.56x45MM
 
 #### AUG A1
@@ -146,6 +146,9 @@ Semi-automatic pistol in 9x19MM
 
 #### P229
 Semi-automatic pistol in .40S&W (9x19MM and .357 SIG conversions available)
+
+### HK UCP
+Semi-automatic pistol in 4.6x30MM
 
 #### .44 Auto Mag Pistol
 Semi-automatic pistol in .44 Magnum
