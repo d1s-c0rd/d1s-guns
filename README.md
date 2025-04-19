@@ -147,7 +147,7 @@ Semi-automatic pistol in 9x19MM
 #### P229
 Semi-automatic pistol in .40S&W (9x19MM and .357 SIG conversions available)
 
-### HK UCP
+#### HK UCP
 Semi-automatic pistol in 4.6x30MM
 
 #### .44 Auto Mag Pistol
@@ -161,7 +161,7 @@ Available for P229
 #### .41 AE Caliber Conversion
 Available for Mini-UZI
 
-### .50 AE Caliber Conversion
+#### .50 AE Caliber Conversion
 Available for M1911
 
 #### .50 BMG Caliber Conversion
@@ -172,14 +172,14 @@ Available for AUG
 
 ### Patches:
 
-### 9MM Caliber conversion
+#### 9MM Caliber conversion
 Properties made available for override: `noiseRadius`
 
-### 10MM Caliber conversion
+#### 10MM Caliber conversion
 Properties made available for override: `magSize`, `noiseRadius`, `shotDelay`
 Added to: M1911
 
-### .45 ACP Caliber conversion
+#### .45 ACP Caliber conversion
 Properties made available for override: `shotDelay`, `noiseChange`, `slowdown`
 
 ## License
